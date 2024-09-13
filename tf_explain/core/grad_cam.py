@@ -37,7 +37,7 @@ class GradCAM:
             model (tf.keras.Model): tf.keras model to inspect
             class_index (int): Index of targeted class
             layer_name (str): Targeted layer for GradCAM. If no layer is provided, it is
-                automatically infered from the model architecture.
+                automatically inferred from the model architecture.
             colormap (int): OpenCV Colormap to use for heatmap visualization
             image_weight (float): An optional `float` value in range [0,1] indicating the weight of
                 the input image to be overlaying the calculated attribution maps. Defaults to `0.7`.
