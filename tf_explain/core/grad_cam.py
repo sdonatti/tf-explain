@@ -115,7 +115,7 @@ class GradCAM:
             inputs = tf.cast(images, tf.float32)
             tape.watch(inputs)
             conv_outputs, predictions = grad_model(inputs)
-            loss = predictions[:, class_index]
+            loss = tf.squeeze(predictions, axis=0)[:, class_index]
 
         grads = tape.gradient(loss, conv_outputs)
 
